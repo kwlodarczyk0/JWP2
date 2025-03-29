@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+geompy/__init__.py
+geompy/figury2d.py
+geompy/figury3d.py
+geompy.egg-info/PKG-INFO
+geompy.egg-info/SOURCES.txt
+geompy.egg-info/dependency_links.txt
+geompy.egg-info/requires.txt
+geompy.egg-info/top_level.txt
