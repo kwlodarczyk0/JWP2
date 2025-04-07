@@ -1,0 +1,16 @@
+* {
+    background: #444;
+    color: whitesmoke;
+}
+
+#taskList{
+    padding: 10px 10px;
+    border: 1px solid whitesmoke;
+}
+
+.task {
+    border-bottom: 1px solid whitesmoke;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}

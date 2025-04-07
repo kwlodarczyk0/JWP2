@@ -1,0 +1,9 @@
+<h2>Users</h2>
+
+<ul>
+    {% for id, user in users.items() %}
+        <a  href="/user/{{ id }}">
+            <li>Imię: {{ user.name }}, lat: {{ user.age }}</li>
+        </a>
+    {% endfor %}
+</ul>
