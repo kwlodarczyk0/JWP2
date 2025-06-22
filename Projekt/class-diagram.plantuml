@@ -1,0 +1,61 @@
+@startuml "Battleship Class Diagram"
+
+class GameHub {
+  - _config: dict
+  - _manager: GameManager
+  + add_player(data)
+  + shot(data)
+}
+
+class GameManager {
+  - _games: dict
+  - _waiting_group: GameGroup
+  + register(name, export_board)
+  + shot(group_name, player, x, y)
+}
+
+class GameGroup {
+  - _player1: Player
+  - _player2: Player
+  - _game: GameClass
+  name: str
+  + add_player(name, export_board)
+  + game: GameClass
+  + full: bool
+}
+
+class GameClass {
+  - first_player: Player
+  - second_player: Player
+  - turn: str
+  - _winner: str
+  + winner: str
+  + shot(username, x, y)
+}
+
+class Player {
+  username: str
+  player_board: Board
+  opponent_board: Board
+}
+
+class Board {
+  size: int
+  arr2: List
+}
+
+enum BoardFieldStatus {
+  FREE
+  OCCUPIED
+  SHIP_HIT
+  MISS_SHOT
+}
+
+GameHub --> GameManager
+GameManager --> GameGroup
+GameGroup --> Player
+GameGroup --> GameClass
+GameClass --> Player
+Player --> Board
+Board --> BoardFieldStatus
+@enduml

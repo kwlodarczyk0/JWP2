@@ -1,0 +1,119 @@
+/*Global styles*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background-color: #444;
+  color: whitesmoke;
+}
+
+h2,
+p {
+  margin: 20px 0;
+}
+
+input {
+  padding: 10px 5px;
+}
+
+button {
+  border: none;
+  padding: 10px 5px;
+  background-color: steelblue;
+  color: whitesmoke;
+  transition: 0.1s;
+  border: 2px solid steelblue;
+  text-transform: uppercase;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+  border: 2px solid steelblue;
+  color: steelblue;
+}
+
+/*To improvment*/
+#main {
+  padding: 10px;
+}
+
+.field {
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ship-actvice {
+  background-color: steelblue;
+}
+
+.nooption {
+  width: 50px;
+  height: 50px;
+  background-color: aqua;
+}
+
+.ship {
+  align-self: flex-start;
+  display: flex;
+  background-color: steelblue;
+}
+
+.ship[draggable='true']:hover {
+  cursor: move;
+}
+
+.shipHorizontal {
+  flex-direction: column;
+}
+
+.two {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+}
+
+.taken {
+  background-color: steelblue;
+}
+
+.notallowed {
+  background-color: rgba(245, 245, 245, 0.7);
+  z-index: -2;
+}
+
+/*/////////////////////////////////*/
+
+.hidden {
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.shooted_div {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: blue;
+}
+
+.shooted_hited {
+  color: red;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.hidden1 {
+  background-color: rebeccapurple;
+}

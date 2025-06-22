@@ -1,0 +1,15 @@
+/*Pending page styles*/
+.pendingPage {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 90vh;
+}
+
+.pendingPage__container {
+  display: flex;
+  padding: 0 1rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

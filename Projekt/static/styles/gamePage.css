@@ -1,0 +1,61 @@
+/*Game page styles*/
+.gamePage {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.gamePage__container {
+  display: flex;
+  padding: 0 1rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.left_board {
+  width: 510px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.right_board {
+  width: 510px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.chatSection {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.messages {
+  height: 200px;
+  width: 400px;
+  border: 2px solid steelblue;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.chatMsg {
+  display: flex;
+  width: 200px;
+}
+
+.shoted {
+  background-color: blueviolet;
+}
+.pppp {
+  background-color: black;
+}
+
+.tkn {
+  background-color: saddlebrown;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Battleship game</title>
+    <link rel="stylesheet" href="./static/styles/startPage.css" />
+    <link rel="stylesheet" href="./static/styles/pendingPage.css" />
+    <link rel="stylesheet" href="./static/styles/gamePage.css" />
+    <link rel="stylesheet" href="./static/styles/style.css" />
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+    <script src="./static/scripts/DOMElements.js" defer></script>
+    <script src="./static/scripts/Player.js" defer></script>
+    <script src="./static/scripts/Ship.js" defer></script>
+    <script src="./static/scripts/startup.js" defer></script>
+    <script src="./static/scripts/game.js" defer></script>
+  </head>
+  <body>
+    <section id="main">
+        <div>
+            <form action="{{ url_for('logout') }}" method="get">
+                <button type="submit">Logout</button>
+            </form>
+        </div>
+
+      <section class="startPage">
+        <h2>Battleship</h2>
+        <div class="startPage__mainContainer">
+          <div class="startPage__container">
+            <div id="board"></div>
+          </div>
+
+          <div class="startPage__menu">
+            <input disabled value="{{ current_user.username  }}" type="text" class="name" placeholder="Enter your name" />
+            <button class="btnStart">Start</button>
+            <button class="btnRotate">Rotate ships</button>
+            <div id="ships"></div>
+          </div>
+        </div>
+      </section>
+      <section class="pendingPage hidden">
+        <div class="pendingPage__container">
+          <p>Waiting for opponent...</p>
+        </div>
+      </section>
+      <section class="gamePage hidden">
+        <div>
+          <span class="first-player" data-id="first-player"></span>
+          <span> vs </span>
+          <span class="second-player" data-id="second-player"></span>
+        </div>
+        <span class="turnActive"></span>
+        <div class="gamePage__container">
+          <div>
+            <h2>Your board</h2>
+            <div class="left_board"></div>
+          </div>
+          <div>
+            <h2>Opponent's board</h2>
+            <div class="right_board"></div>
+          </div>
+        </div>
+
+        <div class="chatSection">
+          <div>
+            <div class="messages"></div>
+          </div>
+          <form class="msgForm">
+            <input
+              type="text"
+              class="msgValue"
+              placeholder="Enter your message"
+            />
+          </form>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>

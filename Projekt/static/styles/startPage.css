@@ -1,0 +1,45 @@
+/*Start page styles*/
+.startPage {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.startPage__container {
+  display: flex;
+}
+
+.startPage__mainContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 50px 0;
+}
+
+#board {
+  width: 510px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#ships {
+  border: 2px solid steelblue;
+  margin: 20px 0;
+  padding: 20px 0;
+  min-height: 300px;
+  width: 510px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.startPage__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
