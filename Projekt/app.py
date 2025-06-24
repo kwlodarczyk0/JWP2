@@ -1,5 +1,6 @@
 import eventlet
 eventlet.monkey_patch()
+from config.init_data import init_data
 from models.models import db, User
 from flask_cors import CORS
 from flask import Flask, render_template, redirect, url_for, request, flash
@@ -20,6 +21,7 @@ from typing import Optional, Any
 app = Flask(__name__, template_folder="templates", static_folder="static")
 app.config.from_object("config.db.Config")
 db.init_app(app)
+init_data(app)
 
 login_manager = LoginManager(app)
 login_manager.login_view = "login"
